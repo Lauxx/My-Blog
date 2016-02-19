@@ -1,0 +1,62 @@
+
+.tron-color{
+	color: black;
+	margin: 0 0 0 0;
+	text-align: center;
+	}
+body{
+	background-image: url(http://st.depositphotos.com/1020341/3135/i/950/depositphotos_31350349-Turquoise-grunge-background-or-texture.jpg);
+}
+h1{
+	font-family: "Valencia Sans";
+	font-size: 100px;
+}
+h3{
+	font-family: "Optima";
+}
+h4{
+	font-family: "Optima";
+}
+footer{
+	font-family: "Optima";
+	background-color:black;
+	color:white;
+	position-bottom: fixed;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+nav{
+	
+
+}
+p{
+	font-family: "Optima";
+	text-align: left;
+}
+.about{
+ background-color: white:
+
+}
+.panels{
+	margin: 50px 50px 50px 50px;
+}
+.center{
+	text-align: center;
+}
+.floater{
+	float: left;
+}
+.white{
+	font-family: "Optima";
+	color:white;
+}
+.text{
+	font-family: "Valencia Sans";
+
+}
+.fontsize{
+	font-size: 100px;
+}
+
+
+
