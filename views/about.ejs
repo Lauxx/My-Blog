@@ -8,8 +8,8 @@
 
 			<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
-	<body class="fun">
-			<nav class="navbar navbar-inverse">
+	<body>
+		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -21,20 +21,20 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
-		        <li class=""><a href="/">Home</a></li>
+		        <li class="para-text"><a href="/">Home</a></li>
 
-		        <li class="dropdown">
+		        <li class="dropdown para-text">
 		          <a class="dropdown-toggle" data-toggle="dropdown" href="/blog">Blog<span class="caret"></span></a>
-		          <ul class="dropdown-menu">
+		          <ul class="dropdown-menu para-text">
 		            <li><a href="/blog">Most Recent</a></li>
-		            <li><a href="#">Top Picks</a></li>
+		            <li><a href="/blog">Post</a></li>
 		            <li><a href="#">FAQ's</a></li>
 		          </ul>
 		        </li>
 
-		        <li class="dropdown">
+		        <li class="dropdown para-text">
 		        <a class ="dropdown-toggle" data-toggle="dropdown" href="/about">About<span class="caret"></span></a>
-		        	<ul class ="dropdown-menu">
+		        	<ul class ="dropdown-menu para-text">
 		        		<li><a href="/about">About</a></li>
 		        		<li><a href="/contact">Contact</a></li>
 		        	</ul>
@@ -42,7 +42,7 @@
 
 		        
 		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
+		      <ul class="nav navbar-nav navbar-right para-text">
 		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 		        
 		      </ul>
@@ -50,29 +50,35 @@
 		  </div>
 		</nav>
 
+		<div class="container">
+			<div class="jumbotron image-jumbo">
+				<h1>About Lo</h1>
+			</div>
+		</div>
+
+		<div class="container div1">
+		</div>
+
+
+
+
+
+		<footer>
 			<div class="container">
-				<div class="jumbotron">
-					<h1>About Lo</h1>
-					<p>Contents ...</p>
-					<p>
-						
-					</p>
+				<div class= 'col-md-4'>
+					<p>Links</p>
+					<a class ="white" href="/">Home</a><br>
+					<a class ="white" href="/blog">Blog</a><br>
+					<a class ="white" href="/about">About</a><br>
+					<a class="white" href="/contact">Contact</a><br>
+				</div>	
+				<div class='row text-center'>
+				<p>Check out more from CodingLotus</p>
+				<p>© Copyright CodingLotus 2016</p>	
 				</div>
-			</div>
-
-
-
-
-
-			<footer>
-			<div class="container">
-			<a class ="white" href="/">Home</a><br>
-			<a class ="white" href="/blog">Blog</a><br>
-			<a class ="white" href="/about">About</a><br>
-			<a class="white" href="/contact">Contact</a><br>
-				<p class="center">© Copyright CodingLotus 2016</p>	
-			</div>
+			</div>	
 		</footer>
+
 	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="app.js"></script>

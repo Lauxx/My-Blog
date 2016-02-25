@@ -1,22 +1,13 @@
 
-.tron-color{
-	color: black;
-	margin: 0 0 0 0;
-	text-align: center;
-	}
-body{
-	background-image: url(http://st.depositphotos.com/1020341/3135/i/950/depositphotos_31350349-Turquoise-grunge-background-or-texture.jpg);
-}
 h1{
 	font-family: "Valencia Sans";
 	font-size: 100px;
+
 }
-h3{
+h3, h4{
 	font-family: "Optima";
 }
-h4{
-	font-family: "Optima";
-}
+
 footer{
 	font-family: "Optima";
 	background-color:black;
@@ -25,38 +16,38 @@ footer{
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
-nav{
-	
 
-}
 p{
 	font-family: "Optima";
 	text-align: left;
 }
-.about{
- background-color: white:
+.feature .glyphicon{
+	font-size: 22px;
+}
 
-}
-.panels{
-	margin: 50px 50px 50px 50px;
-}
-.center{
-	text-align: center;
-}
-.floater{
-	float: left;
-}
-.white{
-	font-family: "Optima";
-	color:white;
+
+.black-blog{
+	font-family: "Valencia Sans";
+	color:black;
 }
 .text{
 	font-family: "Valencia Sans";
 
 }
-.fontsize{
-	font-size: 100px;
+.para-text{
+	font-family: "Didot";
 }
-
+.white{
+	color: white;
+}
+.div1{
+	background-color: white;
+	padding: 20px 40px 20px 40px;
+	margin-bottom: 50px;
+	border-top: 1px solid #e6e6e6;
+}
+.image-jumbo{
+	background-image: url(http://40.media.tumblr.com/tumblr_lyyaxe1awE1rn02f7o1_1280.jpg);
+}
 
 
