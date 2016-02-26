@@ -14,6 +14,9 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 3000;
 var router = express.Router();
 
+var Contact = require('./models/contact');
+var contactRouter = require('./routes/contact-me');
+
 var Post = require('./models/blog-post')
 var postRouter = require('./routes/post')
 
@@ -50,6 +53,17 @@ app.get('/blog', function(req, res){
 	})
 });
 
+app.get('/contact', function(req,res){
+	Contact.find(function(err, contact){
+		if(err){
+			console.log(err)
+		} else {
+			res.render('contact', {data:contact})
+		}
+	})
+});
+
+app.use('/api', contactRouter);
 app.use('/api',postRouter);
 
 app.listen(port);

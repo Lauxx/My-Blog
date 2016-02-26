@@ -24,10 +24,11 @@ p{
 .feature .glyphicon{
 	font-size: 22px;
 }
+.pink{
+	color: #ff3385;
+}
 
-
-.black-blog{
-	font-family: "Valencia Sans";
+.black{
 	color:black;
 }
 .text{
