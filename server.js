@@ -60,8 +60,10 @@ router.get('/', function(req, res){
 
 
 app.get('/', function(req, res){
-	res.render('index')
+	var user = req.user || "no user";
+	res.render('index', {user: user})
 });
+
 app.get('/about', function(req, res){
 	res.render('about')
 });
