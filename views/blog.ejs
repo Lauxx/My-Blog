@@ -53,16 +53,48 @@
 		
 		<div class="container">
 			<div class="jumbotron image-jumbo">
-				<h1>Blog</h1>
+				<div class = "jumbotron back-pink">
+					<h1>Blog</h1>
+				</div>
 			</div>
 		</div>
 
 		<div class="container div1">
-			
-			<p>Join the Coding Craze</p>
-			
+			<div class = "row">
+				<div class='col-md-8 col-xs-12'>
+					<form action="" method="POST" role="form">
+						<legend><h3>Post a Blog</h3></legend>
+					
+						<div class="form-group">
+							<label class = "para-text" for="">Title</label>
+							<input type="text" class="form-control para-text" id="" placeholder="Your next title goes here.">
+							<label class = "para-text" for="">Author</label>
+							<input type="text" class="form-control para-text" id="" placeholder="Author name goes here.">
+							<label class = "para-text" for="">Content</label>
+							<input type="text" spellcheck="true" class="form-control para-text" id="" placeholder="Blog content goes here.">
+							</input>	
+							
+						</div>
+							<button type="submit" class = "para-text">Submit</button>
+					</form>
+				</div>
+			</div>	
 		</div>	
-
+		<div class="container">
+			<div class = "row">
+				<% for(var i = 0; i < posts.length; i++) {%>
+				<div id = "<%=posts[i]._id%>" class = "container div1">
+					
+					<h4><b>Title of Post</b></h4>
+					<p><%=posts[i].title%></p>
+					<h4><b>Discussion</b></h4>
+					<p><%=posts[i].content%></p>
+					<h4><b>Author</b></h4>
+					<p><%=posts[i].author%></p>
+				</div>
+				<% }; %>
+			</div>
+		</div>
 
 
 		

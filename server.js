@@ -36,29 +36,24 @@ app.get('/', function(req, res){
 app.get('/about', function(req, res){
 	res.render('about')
 });
-app.get('/blog', function(req, res){
-	res.render('blog')
-});
-app.get('/contact', function(req, res){
-	res.render('contact')
-});
+
 
 app.get('/blog', function(req, res){
-	Post.find(function(err, post){
+	Post.find(function(err, data){
 		if(err){
 			console.log(err)
 		} else {
-			res.render('blog', {data:post})
+			res.render('blog', {posts:data})
 		}
 	})
 });
 
 app.get('/contact', function(req,res){
-	Contact.find(function(err, contact){
+	Contact.find(function(err, data){
 		if(err){
 			console.log(err)
 		} else {
-			res.render('contact', {data:contact})
+			res.render('contact', {contact: data})
 		}
 	})
 });
