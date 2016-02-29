@@ -60,7 +60,7 @@ router.get('/', function(req, res){
 
 
 app.get('/', function(req, res){
-	var user = req.user || "no user";
+	var user = req.user || " ";
 	res.render('index', {user: user})
 });
 
