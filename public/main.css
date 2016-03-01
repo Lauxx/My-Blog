@@ -49,10 +49,17 @@ p{
 	border-top: 1px solid #e6e6e6;
 }
 .image-jumbo{
+	margin-top: -21px;
 	background-image: url(http://40.media.tumblr.com/tumblr_lyyaxe1awE1rn02f7o1_1280.jpg);
+	background-attachment: fixed;
+	height: 220px;
+	opacity: 0.4;
 }
 .back-pink{
 	background-color:  #ffe6f0;
+
 }
+
+
 
 

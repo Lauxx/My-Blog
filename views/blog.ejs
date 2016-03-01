@@ -62,20 +62,21 @@
 		<div class="container div1">
 			<div class = "row">
 				<div class='col-md-8 col-xs-12'>
-					<form action="" method="POST" role="form">
+					<form action="/api/blog" method="POST" role="form">
 						<legend><h3>Post a Blog</h3></legend>
 					
 						<div class="form-group">
 							<label class = "para-text" for="">Title</label>
-							<input type="text" class="form-control para-text" id="" placeholder="Your next title goes here.">
-							<label class = "para-text" for="">Author</label>
-							<input type="text" class="form-control para-text" id="" placeholder="Author name goes here.">
+							<input type="text" class="form-control para-text" name="title"id="title" placeholder="Your next title goes here.">
+							
 							<label class = "para-text" for="">Content</label>
-							<input type="text" spellcheck="true" class="form-control para-text" id="" placeholder="Blog content goes here.">
+							<input type="text" spellcheck="true" class="form-control para-text" name='content'id="content" placeholder="Blog content goes here.">
+							</input><label class = "para-text" for="">Date</label>
+							<input type="text" spellcheck="true" class="form-control para-text" name ="date" id="date" placeholder="Date">
 							</input>	
 							
 						</div>
-							<button type="submit" class = "para-text">Submit</button>
+							<button id="" type="submit" class = "para-text">Submit</button>
 					</form>
 				</div>
 			</div>	
@@ -91,9 +92,14 @@
 					<p><%=posts[i].content%></p>
 					<h4><b>Author</b></h4>
 					<p><%=posts[i].author%></p>
+					<h4><b>Date</b></h4>
+					<p><%=posts[i].date%></p>
 				</div>
 				<% }; %>
 			</div>
+		</div>
+		<div class = "container" id="postRow">
+			
 		</div>
 
 
