@@ -1,7 +1,8 @@
 
 h1{
 	font-family: "Valencia Sans";
-	font-size: 100px;
+	text-align: center;
+	font-size: 150px;
 
 }
 h3, h4{
@@ -19,14 +20,12 @@ footer{
 
 p{
 	font-family: "Optima";
-	text-align: left;
+	text-align: center;
 }
 .feature .glyphicon{
 	font-size: 22px;
 }
-.pink{
-	color: #ff3385;
-}
+
 
 .black{
 	color:black;
@@ -50,16 +49,23 @@ p{
 }
 .image-jumbo{
 	margin-top: -21px;
-	background-image: url(http://40.media.tumblr.com/tumblr_lyyaxe1awE1rn02f7o1_1280.jpg);
+	background-image: url(https://vasare.files.wordpress.com/2011/07/screen-shot-2011-07-06-at-19-23-21.png);
 	background-attachment: fixed;
 	height: 220px;
 	opacity: 0.4;
+	color: black,
 }
 .back-pink{
 	background-color:  #ffe6f0;
 
 }
-
-
-
+.tweet-para{
+	float: right;
+}
+.heading{
+	background-color: grey;
+}
+.center{
+	text-align: center;
+}
 

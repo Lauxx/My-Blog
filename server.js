@@ -6,6 +6,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blog');
+var tweetRouter = require('./routes/tweets');
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
@@ -68,6 +69,9 @@ app.get('/about', function(req, res){
 	res.render('about')
 });
 
+app.get('/social', function(req, res){
+	res.render('social')
+});
 
 app.get('/blog', function(req, res){
 	Post.find(function(err, data){
@@ -91,6 +95,7 @@ app.get('/contact', function(req,res){
 
 app.use('/api', contactRouter);
 app.use('/api',postRouter);
+app.use('/api/tweets', tweetRouter);
 
 
 
