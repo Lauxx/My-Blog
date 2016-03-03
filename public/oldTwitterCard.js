@@ -1,8 +1,3 @@
-//-TwitterApp: gets state and passes it down to the children; manage state at highest possible level
-//  -SearchBar: cares about the state
-//	-TwitterBox: cares about the state
-//		-TwitterCard
-
 // var TwitterCard = React.createClass({
 // 	getInitialState: function() {//only happens once - the first time the page is opened - being born
 // 		return {

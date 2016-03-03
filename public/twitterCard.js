@@ -7,9 +7,9 @@ var TwitterCard = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<div className="panel panel-default">
+				<div className="panel panel-default col-md-4">
 				<div className="panel-body">
-					Basic panel example
+					Hello Lotus
 				</div>
 				</div>
 			</div>
