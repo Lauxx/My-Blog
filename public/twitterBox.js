@@ -3,17 +3,13 @@
 //	-TwitterBox: cares about the state
 //		-TwitterCard
 
-var TwitterCard = React.createClass({
+var TwitterBox = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<div className="panel panel-default">
-				<div className="panel-body">
-					Basic panel example
-				</div>
-				</div>
+			<h4> Twitter Box </h4>
+			<TwitterCard/>
 			</div>
-
 			)
 	}
 });

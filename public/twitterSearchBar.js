@@ -3,17 +3,14 @@
 //	-TwitterBox: cares about the state
 //		-TwitterCard
 
-var TwitterCard = React.createClass({
+
+var TwitterSearchBar = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<div className="panel panel-default">
-				<div className="panel-body">
-					Basic panel example
-				</div>
-				</div>
+			<input type="text" placeholder="search" />
+			<button> hit it </button>
 			</div>
-
 			)
 	}
 });

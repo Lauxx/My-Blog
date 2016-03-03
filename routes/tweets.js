@@ -12,10 +12,11 @@ var T = new Twit({
   	timeout_ms:           60*1000,
 })
 
-router.route('/:keyword')
+router.route('/:keyword') //defines an api endpoint :(colon) signifies a parameter 
 	.get(function(req, res){
 		var keyword = req.params.keyword;
-		T.get('search/tweets', { q: keyword + ' since:2011-07-11', count: 100 }, function(err, data, response) {
+		//search/tweets = twitters api endpoint
+		T.get('search/tweets', { q: keyword + ' since:2011-07-11', count: 10 }, function(err, data, response) {
   		var myTweetArr = data.statuses.map(function(tweet){
   			return {
   				text: tweet.text, 

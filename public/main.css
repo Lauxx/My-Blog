@@ -1,5 +1,5 @@
 
-h1{
+h1, h2{
 	font-family: "Valencia Sans";
 	text-align: center;
 	font-size: 150px;
@@ -13,7 +13,7 @@ footer{
 	font-family: "Optima";
 	background-color:black;
 	color:white;
-	position-bottom: fixed;
+	
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
@@ -33,6 +33,7 @@ p{
 .text{
 	font-family: "Valencia Sans";
 
+
 }
 .para-text{
 	font-family: "Didot";
@@ -40,6 +41,7 @@ p{
 }
 .white{
 	color: white;
+	font-family: Didot;
 }
 .div1{
 	background-color: white;
@@ -68,4 +70,6 @@ p{
 .center{
 	text-align: center;
 }
-
+.div-footer{
+	border-top: 1px solid grey;
+}
