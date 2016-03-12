@@ -23,13 +23,13 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
-		        <li class="para-text"><a href="/">Home</a></li>
+		        <li class="para-text"><a href="#/">Home</a></li>
 
 		        <li class="dropdown para-text">
 		          <a class="dropdown-toggle" data-toggle="dropdown" href="/blog">Blog<span class="caret"></span></a>
 		          <ul class="dropdown-menu para-text">
-		            <li><a href="/blog">Most Recent</a></li>
-		            <li><a href="/blog">Post</a></li>
+		            <li><a href="#blog">Most Recent</a></li>
+		            <li><a href="#blog">Post</a></li>
 		            <li><a href="#">FAQ's</a></li>
 		          </ul>
 		        </li>
@@ -60,85 +60,108 @@
 		    </div>
 		  </div>
 		</nav>
-	</div>
-		
-
-
-	
-			<div class="jumbotron image-jumbo">
+		<div class="jumbotron image-jumbo">
 				
 			</div>
 			
 			<div class ="container div1">
-				<h1>CodingLotus</h1>
-				<p class="para-text">A novices journey through computer programming.</p>
+				<div class='col-xs-12'>
+					<h1 >CodingLotus</h1>
+					<p class="para-text">A novices journey through computer programming.</p>
+				</div>
 			</div>
 			
-
-			<div class="jumbotron image-jumbo">
-				
-			</div>  
+	</div>
+		
 	
-	<div class="container div1">
-		<div class='row text-center feature'>
-			<div class='col-md-12 col-xs-12 center'>
-				<h4 class="para-text">A little about CodingLotus</h4>
-					<p>This site will hopefully help any of those who are interested in the world of computer programming. I will be documenting my experience, answering my own pain-staking questions, and hopefully yours, relating to the world of coding. </p>
-			
-					<span class="glyphicon glyphicon-option-horizontal"></span>
-						
-			</div>
-		</div>	
-	</div>
-	<div class="jumbotron image-jumbo">
-				
-	</div> 
 
-	<div class="container div1">	
-		<div class="row text-center feature">
-			<div class="col-md-12 col-xs-12">
-					<h4 class = "para-text"> Things to remember</h4>
-					<p>It is important to note, during the course of my first year we will be focusing mainly on:</p>
-					<ul class="para-text"><b>HTML 
-					CSS, 
-					Javascript, 
-					Node.js, 
-					JQuery, 
-					AJAX, 
-					Git/Github, 
-					and SQL Databases.</b></ul> 
-					<p>We will also look into methodologies that are common in the industry including Agile/Lean, paired programming and the importance of code reviews.</p>
-					<span class="glyphicon glyphicon-option-horizontal"></span>
-			</div>
-		</div>	
-	</div>
-	<div class="jumbotron image-jumbo">
-				
-			</div> 
-	<div class="container div1">
-		<div class='row text-center feature'>
-			<div class= "col-md-12 col-xs-12">
-					<h4 class="para-text">Most recent <a href='/blog' class="pink">blogs</a></h4>
-					<p>This will host blog links to the most recent postings. Feel free to click here to see all blog postings.</p>
-				
-				<a href='/blog' class="glyphicon glyphicon-option-horizontal black"></a>
-			</div>
-		</div>	
-	</div>
+	<div id="page1">
+		<a id='/' class='smooth'>
 			
-	<div class="jumbotron image-jumbo">
-				
-	</div> 
+ 
+	
 		
-		
+			<section class="container div1">
+				<section class='row feature'>
+					<section class='col-xs-12 center'>
+						<h4 class="para-text">A little about CodingLotus</h4>
+							<p>This site will hopefully help any of those who are interested in the world of computer programming. I will be documenting my experience, answering my own pain-staking questions, and hopefully yours, relating to the world of coding. </p>
+					
+							
+								
+					</section>
+				</section>	
+			</section>
+			 
+
+			<div class="container div1">	
+				<div class="row feature">
+					<div class="col-xs-12">
+							<h4 class = "para-text"> Things to remember</h4>
+							<p>It is important to note, during the course of my first year we will be focusing mainly on:</p>
+							<ul class="para-text"><b>HTML 
+							CSS, 
+							Javascript, 
+							Node.js, 
+							JQuery, 
+							AJAX, 
+							Git/Github, 
+							and SQL Databases.</b></ul> 
+							<p>We will also look into methodologies that are common in the industry including Agile/Lean, paired programming and the importance of code reviews.</p>
+							
+					</div>
+				</div>	
+			</div>
+			
+			
+			
+	</div>	
+	<div id='page2'>
+		<a id="blog" class="smooth"></a>
+		<div class="container div1">
+				<div class='row  feature'>
+					<div class= "col-xs-12">
+							<h4 class="para-text">Most recent blog</h4>
+							<p>This will host blog links to the most recent postings. Feel free to click here to see all blog postings.</p>
+						
+						
+					</div>
+				</div>	
+			</div>
+
+			
+			
+			<div class="container div1">
+			<div class = "row">
+				<div class='col-xs-12'>
+					<form action="/api/blog" method="POST" role="form">
+						<legend><h3>Post a Blog</h3></legend>
+					
+						<div class="form-group">
+							<label class = "para-text" for="">Title</label>
+							<input type="text" class="form-control para-text" name="title"id="title" placeholder="Your next title goes here.">
+							
+							<label class = "para-text" for="">Content</label>
+							<input type="text" spellcheck="true" class="form-control para-text" name='content'id="content" placeholder="Blog content goes here.">
+							</input><label class = "para-text" for="">Date</label>
+							<input type="text" spellcheck="true" class="form-control para-text" name ="date" id="date" placeholder="Date">
+							</input>	
+							
+						</div>
+							<button id="" type="submit" class = "para-text">Submit</button>
+					</form>
+				</div>
+			</div>	
+		</div>
+	</div>	
 	
 		
 		<footer>
 			<div class="container">
 				<div class= 'col-md-4'>
 					<h5 class="white">Links</h5>
-					<a class ="white" href="/">Home</a><br>
-					<a class ="white" href="/blog">Blog</a><br>
+					<a class ="white" href="#/">Home</a><br>
+					<a class ="white" href="#blog">Blog</a><br>
 					<a class ="white" href="/about">About</a><br>
 					<a class="white" href="/contact">Contact</a><br><br>
 					

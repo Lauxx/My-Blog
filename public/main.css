@@ -1,12 +1,13 @@
 
 h1, h2{
 	font-family: "Valencia Sans";
-	text-align: center;
-	font-size: 150px;
+	
+	
 
 }
 h3, h4{
 	font-family: "Optima";
+	text-align: center;
 }
 
 footer{
@@ -20,10 +21,12 @@ footer{
 
 p{
 	font-family: "Optima";
-	text-align: center;
+	
+	color: black;
 }
 .feature .glyphicon{
 	font-size: 22px;
+	align-items: center;
 }
 
 
@@ -31,13 +34,15 @@ p{
 	color:black;
 }
 .text{
-	font-family: "Valencia Sans";
+	font-family: "Valencia Sans"
+	color: black;
 
 
 }
 .para-text{
 	font-family: "Didot";
-	text-align: center-text;
+	
+	color: black;
 }
 .white{
 	color: white;
@@ -67,9 +72,8 @@ p{
 .heading{
 	background-color: grey;
 }
-.center{
-	text-align: center;
-}
+
 .div-footer{
 	border-top: 1px solid grey;
 }
+

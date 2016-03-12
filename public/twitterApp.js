@@ -14,10 +14,14 @@ var TwitterApp = React.createClass({
 			keyword: 'drumpf'
 		} 
 	},
-	loadTweetsFromServer: function(){
+	onKeywordSubmit: function(newKeyword){//just a function that exists- not a prop or a state- as is
+		this.setState({keyword: newKeyword});
+		this.loadTweetsFromServer(newKeyword);
+	},
+	loadTweetsFromServer: function(keyword){
 		var self = this;
 		$.ajax({
-			url: this.props.url + this.state.keyword,
+			url: this.props.url + keyword,
 			method: 'GET',
 		}).done(function(data){
 			self.setState({tweets: data})
@@ -25,12 +29,13 @@ var TwitterApp = React.createClass({
 
 	},
 	componentDidMount: function(){
-		this.loadTweetsFromServer();
+		this.loadTweetsFromServer(this.state.keyword);
 	},
 	render: function () {
 	return (
 		<div>
-			<TwitterSearchBar/>
+		<p> Searching Twitter for: {this.state.keyword}</p>
+			<TwitterSearchBar onKeywordSubmit={this.onKeywordSubmit}/>
 			<TwitterBox tweetsArray={this.state.tweets}/>
 		</div>
 		)
@@ -39,3 +44,4 @@ var TwitterApp = React.createClass({
 
 React.render(<TwitterApp url = "/api/tweets/"/>,
 	document.getElementById ('twitterapp'));
+

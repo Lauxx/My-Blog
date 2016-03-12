@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
-
+var Comment = require('../models/comments');
 var Post = require('../models/blog-post');
 
-router.route('/blog')
+router.route('/')
 	.get(function(req, res){
 
 		Post.find()
 		.populate('author')
+		.populate('comments')
 		.exec(function(err, post){
 			if(err){
 				console.log(err)
@@ -78,7 +79,33 @@ router.route('/blog/:blog_id')
 			}
 		});
 	})
+	
+router.route('/blog/:blog_id/comment')
+	.post(function(req, res){
+		//created new comment; use blog id and user id
+		var comment = new Comment();
+		comment.body = req.body.body ? req.body.body : comment.body;
+		comment.user = '56d49890f0ec372b04000001';
+		comment.blog = req.params.blog_id;
 
+		comment.save(function(err, comm){
+			if (err){
+				res.send(err)
+			} else {
+				//find blog by id & then push comment into comments array
+				Post.findById(req.params.blog_id, function(err, post){
+					if(err){
+						res.send(err)
+					} else {
+						//comments = array on our blog-post schema
+						post.comments.push(comm._id)
+						post.save();
+						res.json(comm);
+					}
+				})
+			}
+		})
+	})
 
 
 

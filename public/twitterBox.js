@@ -9,9 +9,9 @@ var TwitterBox = React.createClass({
 	},//if array is not being passed correctly - tell me about it - safety net
 	render: function(){
 		var tweets = this.props.tweetsArray.map(function(tweet){
-			return <TwitterCard screen_name="tweet.screen_name" 
-			text="tweet.text" created_at="tweet.created_at"
-			profile_img_ur="tweet.profile_img_ur"/>
+			return <TwitterCard screen_name={tweet.screen_name} 
+			text={tweet.text} created_at={tweet.created_at}
+			profile_impg={tweet.profile_img}/>
 		});
 		return (
 			<div>
