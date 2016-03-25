@@ -62,7 +62,7 @@ router.get('/', function(req, res){
 
 app.get('/', function(req, res){
 	var user = req.user || " ";
-	res.render('index', {user: user})
+	res.render('index', {user: user});
 });
 
 app.get('/about', function(req, res){

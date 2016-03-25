@@ -3,7 +3,7 @@ var router = express.Router();
 var Comment = require('../models/comments');
 var Post = require('../models/blog-post');
 
-router.route('/')
+router.route('/blog')
 	.get(function(req, res){
 
 		Post.find()
@@ -41,7 +41,7 @@ router.route('/')
 
 router.route('/blog/:blog_id')
 	.get(function(req, res){
-		Post.find(req.params.blog_id, function(err, post){
+		Post.findById(req.params.blog_id, function(err, post){
 			if(err){
 				console.log(err)
 			} else {

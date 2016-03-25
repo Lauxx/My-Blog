@@ -1,13 +1,17 @@
-
-h1, h2{
-	font-family: "Valencia Sans";
-	
-	
-
+.images{
+	height: 500px !important;
+	width: 100% !important;
 }
+.carousel-margin{
+	margin-top: -50px;
+}
+
 h3, h4{
 	font-family: "Optima";
 	text-align: center;
+}
+h1 {
+	font-family: "Optima";
 }
 
 footer{
@@ -19,16 +23,24 @@ footer{
 	padding-top: 20px;
 }
 
-p{
+.optima{
 	font-family: "Optima";
-	
-	color: black;
-}
-.feature .glyphicon{
-	font-size: 22px;
-	align-items: center;
+	font-size: 15px;
 }
 
+p {
+	font-family: "Optima";
+	color: black;
+}
+.login-form{
+	padding: 15px;
+}
+.login-button{
+	margin-left: 40px;
+	border: black; 
+	background-color: pink;
+	margin-bottom: 10px;
+}
 
 .black{
 	color:black;
@@ -36,17 +48,22 @@ p{
 .text{
 	font-family: "Valencia Sans"
 	color: black;
-
+}
+.font-size-carousel{
+	font-size: 25px;
+}
+.didot{
+	font-family: "Didot";
+	color: black;
 
 }
-.para-text{
-	font-family: "Didot";
-	
-	color: black;
+.active-user{
+	position: relative;
+	text-align: right !important;
 }
 .white{
 	color: white;
-	font-family: Didot;
+	
 }
 .div1{
 	background-color: white;
@@ -54,18 +71,8 @@ p{
 	margin-bottom: 50px;
 	border-top: 1px solid #e6e6e6;
 }
-.image-jumbo{
-	margin-top: -21px;
-	background-image: url(https://vasare.files.wordpress.com/2011/07/screen-shot-2011-07-06-at-19-23-21.png);
-	background-attachment: fixed;
-	height: 220px;
-	opacity: 0.4;
-	color: black,
-}
-.back-pink{
-	background-color:  #ffe6f0;
 
-}
+
 .tweet-para{
 	float: right;
 }
@@ -76,4 +83,7 @@ p{
 .div-footer{
 	border-top: 1px solid grey;
 }
-
+#page1, #page2, #page3, #page4, #page5{
+	margin-top: 30px;
+	padding-top: 20px; 
+}
