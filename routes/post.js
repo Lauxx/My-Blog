@@ -79,7 +79,7 @@ router.route('/blog/:blog_id')
 			}
 		});
 	})
-	
+
 router.route('/blog/:blog_id/comment')
 	.post(function(req, res){
 		//created new comment; use blog id and user id
