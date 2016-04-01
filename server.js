@@ -7,6 +7,7 @@ var flash = require('connect-flash');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blog');
 
+
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
@@ -45,18 +46,14 @@ var router = express.Router();
 
 var Contact = require('./models/contact');
 var contactRouter = require('./routes/contact-me');
-
-var Post = require('./models/blog-post')
-var postRouter = require('./routes/post')
+var BlogPost = require('./models/blogPost');
+var blogPostRouter = require('./routes/blog_route');
 
 router.use(function(req, res, next){
 	console.log('Something is happening');
 	next();
 });
 
-router.get('/', function(req, res){
-	res.json({message: "Good job Lauren!"})
-});
 
 
 app.get('/', function(req, res){
@@ -65,20 +62,11 @@ app.get('/', function(req, res){
 });
 
 
-app.get('/blog', function(req, res){
-	Post.find(function(err, data){
-		if(err){
-			console.log(err)
-		} else {
-			res.render('blog', {posts:data})
-		}
-	})
-});
+
 
 
 app.use('/api', contactRouter);
-app.use('/api',postRouter);
-
+app.use('/api/blogPost', blogPostRouter);
 
 app.listen(port);
 console.log("Cash money on port " + port);

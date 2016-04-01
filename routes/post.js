@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Comment = require('../models/comments');
-var Post = require('../models/blog-post');
+var Post = require('../models/blogPost');
 
 router.route('/blog')
 	.get(function(req, res){
@@ -33,7 +33,7 @@ router.route('/blog')
 			if(err){
 				console.log(err)
 			} else {
-				res.redirect('/blog')
+				res.json(post)
 			}
 		});
 	})
