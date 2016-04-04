@@ -1,11 +1,21 @@
 var express = require('express');
 var router = express.Router();
 var BlogPost = require('../models/blogPost');
-
+var Comments = require('../models/comments');
+//'/api/blogPost'
 
 router.route('/')
+//this route gets all blog posts
 	.get(function(req, res, next){
-		BlogPost.find(function(err, post){
+		BlogPost.find()
+			.populate({
+			path: 'comments',
+			populate: {
+				path: 'user',
+				select: 'local.username',
+			}
+		})
+			.exec(function(err, post){
 			if (err){
 				res.status(500).send(err, "Something broke on getting blogposts");
 				next();
@@ -14,11 +24,11 @@ router.route('/')
 			}
 		});
 	})
-
+//this route allows you to post a blog
 	.post(function(req, res, next){
 		var post = new BlogPost();
 
-		post.author = '56f59f6d3a5b222703000003';
+		post.author = req.body.author || '56f59f6d3a5b222703000003';
 		post.title = req.body.title;
 		post.content = req.body.content;
 		post.date = req.body.date;
@@ -34,8 +44,17 @@ router.route('/')
 	})
 
 router.route('/:_id')
+//this route allows you to get one blog post by id and returns all of its comments
 	.get(function(req, res, next){
-		BlogPost.findById({_id: req.params._id}, function(err, post){
+		BlogPost.findById({_id: req.params._id})
+		.populate({
+			path: 'comments',
+			populate: {
+				path: 'user',
+				select: 'local.username',
+			}
+		})
+		.exec(function(err, post){
 			if (err){
 				res.status(500).send(err, "Something broke on getting single blog");
 				next();
@@ -44,13 +63,13 @@ router.route('/:_id')
 			}
 		});
 	})
-
+//this route allows you to update a current blog
 	.put(function(req, res, next){
 		BlogPost.findById({_id: req.params._id}, function(err, update){
 			if (err){
 				res.status(500).send(err, "Something broke on PUTting the blog")
 			} else {
-				update.author = '56f59f6d3a5b222703000003';
+				update.author = req.body.author || '56f59f6d3a5b222703000003';
 				update.title = req.body.title ? req.body.title : update.title;
 				update.content = req.body.content ? req.body.content : update.content;
 				update.date = req.body.date ? req.body.date: update.date;
@@ -65,7 +84,7 @@ router.route('/:_id')
 			}
 		});
 	})
-
+//this route deletes a single blog based on id
 	.delete(function(req, res, next){
 		BlogPost.remove({_id: req.params._id}, function(err, post){
 			if (err){
@@ -76,5 +95,48 @@ router.route('/:_id')
 			}
 		});
 	})
+
+
+
+router.route('/:_id/comment')
+// this route allows you to post a comment specific to a blog id
+	.post(function(req, res, next){
+		var comment = new Comments();
+
+		comment.body = req.body.body;
+		comment.date = req.body.date;
+		comment.blog = req.params._id;
+		comment.user = '56f59f6d3a5b222703000003'; 
+
+		comment.save(function(err, comment){
+			if(err){
+				res.status(500).send(err, "Something broke on saving a comment");
+			} else {
+				BlogPost.findById(req.params._id, function(err, post){
+					if(err){
+						res.status(500).send(err, "Something broke on saving comment to blogpost")
+					} else {
+						post.comments.push(comment._id);
+						post.save();
+						res.json(comment);
+					}
+				})
+			}
+		});
+	})
+
+
+
+// router.route('/comment/:comment_id')
+// 	.delete(function(req, res){
+// 		Comments.remove({ comment_id: req.params.comment_id },
+// 			 function(err, comment){
+// 			if(err){
+// 				res.status(500).send(err, "Something broke on deleting a comment")
+// 			} else {
+// 				res.json(comment)
+// 			}
+// 		});
+// 	})
 
 module.exports = router;

@@ -11,16 +11,19 @@ h3, h4{
 	text-align: center;
 }
 h1 {
-	font-family: "Optima";
+	font-family: "Chasing Embers Demo Version";
 }
-
-footer{
+.font{
+	font-family: "Chasing Embers Demo Version";
+	margin-left: 20px;
+	font-size: 40px;
+	text-align: center;
+	color: black;
+}
+.footer{
 	font-family: "Optima";
-	background-color:black;
 	color:white;
-	
-	padding-bottom: 20px;
-	padding-top: 20px;
+	position: relative;
 }
 .brand{
 	font-size: 20px;
@@ -85,17 +88,22 @@ p {
 	background-color: grey;
 }
 
-.div-footer{
-	border-top: 1px solid grey;
-}
-#page1, #page2, #page3, #page4, #page5{
-	margin-top: 30px;
-	padding-top: 20px; 
-}
+
 @media(max-width: 767px){
 	.optima{
 	font-family: "Optima";
 	font-size: 15px;
 	color: white !important;
 	}
+}
+.nav-flex{
+	display: flex;
+	flex-wrap: wrap;
+	display: inline-block;
+
+}
+.foot-flex{
+	display: flex;
+	flex-wrap: wrap;
+
 }
