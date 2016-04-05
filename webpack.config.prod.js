@@ -3,13 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
-  entry: {
-    main: [
-    './client/blogApp']
-  },
+  entry: [
+    './client/blogApp'
+  ],
   output: {
     path: path.join(__dirname, 'static'),
-    filename: '[name].js',
+    filename: 'main.js',
     publicPath: '/static/'
   },
   plugins: [
@@ -26,13 +25,20 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: ['babel'] , 
-      query: { 
-        presets: ['es2015', 'react']
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: path.join(__dirname, 'client'),
+        query: {
+          plugins: ['transform-runtime'],
+          presets: ['es2015', 'stage-0', 'react']
+        }
       },
-      include: path.join(__dirname, 'client')
-    }]
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      }
+    ]
   }
 };
