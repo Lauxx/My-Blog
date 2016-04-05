@@ -6,7 +6,7 @@ var Comments = require('../models/comments');
 
 router.route('/')
 //this route gets all blog posts
-	.get(function(req, res, next){
+	.get(function(req, res){
 		BlogPost.find()
 			.populate({
 			path: 'comments',
@@ -18,7 +18,6 @@ router.route('/')
 			.exec(function(err, post){
 			if (err){
 				res.status(500).send(err, "Something broke on getting blogposts");
-				next();
 			} else {
 				res.json(post)
 			}
@@ -45,7 +44,7 @@ router.route('/')
 
 router.route('/:_id')
 //this route allows you to get one blog post by id and returns all of its comments
-	.get(function(req, res, next){
+	.get(function(req, res){
 		BlogPost.findById({_id: req.params._id})
 		.populate({
 			path: 'comments',
@@ -57,7 +56,7 @@ router.route('/:_id')
 		.exec(function(err, post){
 			if (err){
 				res.status(500).send(err, "Something broke on getting single blog");
-				next();
+				
 			} else {
 				res.json(post)
 			}
@@ -101,12 +100,13 @@ router.route('/:_id')
 router.route('/:_id/comment')
 // this route allows you to post a comment specific to a blog id
 	.post(function(req, res, next){
+		var userId = req.user ? req.user._id : "56f59f6d3a5b222703000003";
 		var comment = new Comments();
 
 		comment.body = req.body.body;
 		comment.date = req.body.date;
 		comment.blog = req.params._id;
-		comment.user = '56f59f6d3a5b222703000003'; 
+		comment.user = req.user._id; 
 
 		comment.save(function(err, comment){
 			if(err){

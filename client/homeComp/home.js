@@ -6,7 +6,7 @@ var Home = React.createClass({
 	render: function(){
 		return (
 			<div className="container jumbotron">
-				<h1>home</h1>
+				<h1>hello codinglotus</h1>
 			</div>
 			)
 	}

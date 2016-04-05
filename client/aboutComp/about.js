@@ -4,8 +4,8 @@ var React = require('react');
 var About = React.createClass({
 	render: function(){
 		return (
-			<div className="jumbotron container">
-				<h1> About </h1>
+			<div className="container jumbotron">
+				<h1> About CodingLotus</h1>
 			</div>
 			)
 	}

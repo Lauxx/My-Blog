@@ -26,7 +26,8 @@
     "build": "npm run clean && npm run build:webpack",
     "start": "node server.js",
     "lint": "eslint client config models routes *.js",
-    "deploy": "npm run build && modulus deploy --project-name stripe-demo"
+    "deploy": "npm run build && modulus deploy --project-name stripe-demo",
+    "go": "npm run build && npm run start"
   },
   "devDependencies": {
     "babel": "^6.5.2",
