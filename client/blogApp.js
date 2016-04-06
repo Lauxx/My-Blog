@@ -1,6 +1,7 @@
 /*BlogApp
 	Navbar
 	Footer
+	
 */
 
 
@@ -14,6 +15,7 @@ var Blog = require('./blogComp/blog');
 var About = require('./aboutComp/about');
 var Contact = require('./contactComp/contact');
 
+require('./stylesheets/main.scss');
 
 var BlogApp = React.createClass({
 	getInitialState: function(){

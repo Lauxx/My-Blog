@@ -7,8 +7,8 @@
 			BlogCard(Stateless)
 	  BlogPostFormData
 	  	BlogPostForm
-	  EditBlogData
-	  	EditBlogForm			
+	  SingleBlogDetailData
+	  	SingleBlogDetail			
 
 */
 
@@ -17,20 +17,33 @@ var React = require('react');
 var BlogListData = require('./blogListData');
 var BlogPostFormData = require('./blogPostFormData');
 var BlogPostToggle = require('./blogPostToggle');
+var SingleBlogDetailData = require('./singleBlogDetailData');
 
 
 var Blog = React.createClass({
 	getInitialState: function(){
 		return {
-			activeComponent: 'blogList'
+			activeComponent: 'blogList',
+			activeBlogId: null,
+		}
+	},
+
+	getId: function(whichComp, id){
+		console.log(id);
+		if(whichComp === 'showOneBlog'){
+			return this.setState({ activeBlogId: id, activeComponent: 'oneBlog'})
+		} else {
+			return null
 		}
 	},
 
 	showComponent: function(){
 		if(this.state.activeComponent === 'blogList'){
-			return <BlogListData />
+			return <BlogListData getId={ this.getId }/>
 		} else if(this.state.activeComponent === 'blogPostForm'){
 			return <BlogPostFormData toggleActiveComp={ this.toggleActiveComp }/>
+		} else if(this.state.activeComponent === 'oneBlog'){
+			return <SingleBlogDetailData id={ this.state.activeBlogId } />	
 		} else {
 			throw new Error('No active Component', this.state.activeComponent);
 		}
@@ -45,7 +58,7 @@ var Blog = React.createClass({
 		<div>
 
 			<div className="jumbotron container">
-				<h1>blog</h1>
+				<h1>blog codinglotus</h1>
 			</div>
 			<div className="container">
 			<BlogPostToggle toggleActiveComp={ this.toggleActiveComp } />

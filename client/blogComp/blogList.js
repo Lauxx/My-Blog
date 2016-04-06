@@ -18,6 +18,8 @@ function BlogList(props){
 
 	var blogs = props.blogArray.map(function(item){
 		return <BlogCard
+				getId={ props.getId }
+				id={ item._id }
 				key={ item._id } 
 				author={ item.author } 
 				title={ item.title } 
