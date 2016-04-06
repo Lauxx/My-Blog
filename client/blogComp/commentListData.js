@@ -9,9 +9,8 @@
 	  	BlogPostForm
 	  SingleBlogDetailData
 	  	SingleBlogDetail
-	  		CommentListData
-	  			CommentList
-	  				CommentCard			
+	  		CommentList
+	  			CommentCard			
 
 */
 
@@ -19,9 +18,19 @@ var React = require('react');
 
 var CommentListData = React.createClass({
 	render: function(){
+		var comments = this.props.commentArray.map(function(comm){
+			var user = comm.user ? comm.user.local : 'no user';
+		return (
+				<div className="col-xs-7 col-xs-offset-1 comments-border">
+					<h1 className="divider">@{ user.username } </h1>
+					<p>{ comm.body }</p>
+					<p className="comments"> Comment Recieved on <b>{ comm.date.substr(0,10) }</b> from <b>{ user.username }</b></p>
+				</div>
+			)
+	})
 		return (
 			<div>
-			Comment List Data here!
+			{ comments }
 			</div>
 			)
 	}

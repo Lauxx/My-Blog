@@ -1,10 +1,14 @@
-.images{
-	height: 500px !important;
-	width: 100% !important;
+.comments{
+	text-align: right;
 }
-.carousel-margin{
-	margin-top: -50px;
+.comments-border{
+	margin-top: 5%;
+	border-top: dotted 1px #95a5a6;
+	border-right: dotted 1px #95a5a6;
+	border-bottom: dotted 1px #95a5a6;
+	border-left: solid 2px #95a5a6;
 }
+
 .divider{
 	border-bottom: solid 1px black;
 }
@@ -30,6 +34,7 @@ h1 {
 	font-family: "Optima";
 	color:white;
 	position: relative;
+	margin-top: 10%;
 }
 .brand{
 	font-size: 20px;

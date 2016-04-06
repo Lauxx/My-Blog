@@ -19,6 +19,7 @@ var React = require('react');
 var CommentListData = require('./commentListData');
 
 function SingleBlogDetail(props){
+
 	return (
 		<div>
 			<div className="col-xs-offset-10">
@@ -28,10 +29,10 @@ function SingleBlogDetail(props){
 			</div>	
 			<div className="container col-xs-10 col-xs-offset-1">
 				<h1 className="divider"> { props.oneBlog.title } </h1>
-					<p> Posted by { props.oneBlog.author }, on { props.oneBlog.date } </p>
+					<p> Posted by <b>{ props.oneBlog.author }</b>, on <b>{ props.oneBlog.date }</b> </p>
 					<p> { props.oneBlog.content } </p>
-			<CommentListData />		
-						<br/><br/>
+					<br/><br/>
+					<CommentListData commentArray={ props.commentArray }/>		
 			</div>			
 		</div>
 		)

@@ -19,7 +19,8 @@ var SingleBlogDetailData = React.createClass({
 
 	getInitialState: function(){
 		return {
-			oneBlog: null
+			oneBlog: null,
+			comments: []
 		}
 	},
 
@@ -33,12 +34,23 @@ var SingleBlogDetailData = React.createClass({
 		})
 	},
 
+	loadCommentsFromServer: function(){
+		var self = this;
+		$.ajax({
+			url: '/api/blogPost/' + this.props.id + '/comment',
+			method: 'GET'
+		}).done(function(data){
+			self.setState({ comments: data })
+		})
+	},
+
 	componentDidMount: function(){
 		this.loadOneBlogFromServer();
+		this.loadCommentsFromServer();
 	},
 
 	render: function(){
-		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog }/> : null;
+		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments }/> : null;
 	}
 });
 

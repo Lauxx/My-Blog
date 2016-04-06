@@ -105,14 +105,14 @@ router.route('/:_id/comment')
 				path: 'comments',
 				populate: {
 					path: 'user', 
-					select: 'user.username'
+					select: 'local.username'
 				}
 			})
 			.exec(function(err, comments){
 				if(err){
 					res.status(500).send(err, "Something broke on getting comments");
 				} else {
-					res.json(comments)
+					res.json(comments.comments)
 				}
 			});
 	})
