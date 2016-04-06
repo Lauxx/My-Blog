@@ -23,7 +23,7 @@ var Footer = React.createClass({
 			<div className="container">
 				<nav className="navbar-inverse footer">
   					<div className="container col-xs-12">
-						<h5 className="">Links</h5>
+					
 							<section> { link } </section>
 							
 					</div>
