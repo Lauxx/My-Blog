@@ -50,7 +50,7 @@ var SingleBlogDetailData = React.createClass({
 	},
 
 	render: function(){
-		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments }/> : null;
+		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id}/> : null;
 	}
 });
 

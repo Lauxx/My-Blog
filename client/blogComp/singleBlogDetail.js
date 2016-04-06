@@ -23,8 +23,9 @@ function SingleBlogDetail(props){
 	return (
 		<div>
 			<div className="col-xs-offset-10">
-				<a className="btn btn-default btn-sm edit-button pencil">
-					<span className="glyphicon glyphicon-pencil pencil" ></span>
+				<a className="btn btn-default btn-sm edit-button pencil" 
+				onClick={ props.getId.bind(null,'editOneBlog', props.id) }>
+					<span className="glyphicon glyphicon-pencil pencil"></span>
 				</a>
 			</div>	
 			<div className="container col-xs-10 col-xs-offset-1">

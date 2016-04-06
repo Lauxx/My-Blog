@@ -7,10 +7,12 @@
 			BlogCard(Stateless)
 	  BlogPostFormData
 	  	BlogPostForm
+	  EditBlogData
+	  	EditBlogForm	
 	  SingleBlogDetailData
 	  	SingleBlogDetail
-	  		CommentList
-	  			CommentCard			
+	  		CommentListData
+			
 
 */
 
@@ -18,6 +20,15 @@ var React = require('react');
 
 var CommentListData = React.createClass({
 	render: function(){
+		var number = function (){
+		var commentCounter = 0;
+		for(var i = 0; i < this.props.commentArray.length; i++){
+			return commentCounter[i]++;
+			console.log(commentCounter);
+		}
+	};
+		
+
 		var comments = this.props.commentArray.map(function(comm){
 			var user = comm.user ? comm.user.local : 'no user';
 		return (
@@ -30,6 +41,8 @@ var CommentListData = React.createClass({
 	})
 		return (
 			<div>
+				<div>
+				</div>
 			{ comments }
 			</div>
 			)
