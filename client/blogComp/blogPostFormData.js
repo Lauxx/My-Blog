@@ -14,6 +14,10 @@ var React = require('react');
 var BlogPostForm = require('./blogPostForm');
 
 var BlogPostFormData = React.createClass({
+	propTypes: {
+		toggleActiveComp: React.PropTypes.func.isRequired
+	},
+
 	getInitialState: function(){
 		return {
 			author: null,
@@ -23,15 +27,6 @@ var BlogPostFormData = React.createClass({
 		}
 	},
 
-	handleNewBlogPost: function(blog){
-		$.ajax({
-			url: '/api/blogPost',
-			type: 'POST',
-			data: blog
-		}).done(function(data){
-			console.log(data)
-		})
-	},
 
 	handleAuthorChange: function(e){
 		this.setState({ author: e.target.value })
@@ -64,6 +59,22 @@ var BlogPostFormData = React.createClass({
 		this.setState({ author: '', title: '', content: '', date: ''})
 
 	},
+
+	handleNewBlogPost: function(blog){
+		$.ajax({
+			url: '/api/blogPost',
+			type: 'POST',
+			data: blog,
+			success: function(data){
+				this.props.toggleActiveComp('blogList');
+				console.log(data);
+			}.bind(this),
+			error: function(xhr, status, err){
+				console.error('/api/blogPost', status, err.toString())
+			}.bind(this)
+		})
+	},
+
 
 	render: function(){
 		return (

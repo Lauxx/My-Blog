@@ -5,6 +5,8 @@
 	  BlogListData
 		BlogList(Stateless)
 			BlogCard(Stateless)
+	  BlogPostFormData
+	  	BlogPostForm		
 
 */
 
@@ -16,7 +18,9 @@ function BlogCard(props){
 				<h1 className="divider"> { props.title } </h1>
 				<p> Posted by { props.author }, on { props.date } </p>
 				<p> { props.content } </p>
-
+				<a className="btn btn-default btn-lg edit-button pencil">
+				<span className="glyphicon glyphicon-pencil pencil" ></span>
+				</a>
 			</div>
 			)
 	};

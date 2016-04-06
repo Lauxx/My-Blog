@@ -5,6 +5,8 @@
 	  BlogListData
 		BlogList(Stateless)
 			BlogCard(Stateless)
+	  BlogPostFormData
+	  	BlogPostForm		
 
 */
 
