@@ -1,6 +1,7 @@
-//BlogApp
-//	Navbar
-//	Footer
+/*BlogApp
+	Navbar
+	Footer
+*/
 
 
 

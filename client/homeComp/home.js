@@ -1,3 +1,6 @@
+/* Home
+	 
+*/
 
 
 var React = require('react');

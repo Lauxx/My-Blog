@@ -5,6 +5,9 @@
 .carousel-margin{
 	margin-top: -50px;
 }
+.divider{
+	border-bottom: solid 1px black;
+}
 
 h3, h4{
 	font-family: "Optima";
