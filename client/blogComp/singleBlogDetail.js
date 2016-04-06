@@ -8,17 +8,21 @@
 	  BlogPostFormData
 	  	BlogPostForm
 	  SingleBlogDetailData
-	  	SingleBlogDetail			
+	  	SingleBlogDetail
+	  		CommentListData
+	  			CommentList
+	  				CommentCard			
 
 */
 
 var React = require('react');
+var CommentListData = require('./commentListData');
 
 function SingleBlogDetail(props){
 	return (
 		<div>
 			<div className="col-xs-offset-10">
-				<a className="btn btn-default btn-lg edit-button pencil">
+				<a className="btn btn-default btn-sm edit-button pencil">
 					<span className="glyphicon glyphicon-pencil pencil" ></span>
 				</a>
 			</div>	
@@ -26,6 +30,7 @@ function SingleBlogDetail(props){
 				<h1 className="divider"> { props.oneBlog.title } </h1>
 					<p> Posted by { props.oneBlog.author }, on { props.oneBlog.date } </p>
 					<p> { props.oneBlog.content } </p>
+			<CommentListData />		
 						<br/><br/>
 			</div>			
 		</div>

@@ -99,6 +99,26 @@ router.route('/:_id')
 
 router.route('/:_id/comment')
 // this route allows you to post a comment specific to a blog id
+	.get(function(req, res){
+		BlogPost.findById({ _id: req.params._id })
+			.populate({
+				path: 'comments',
+				populate: {
+					path: 'user', 
+					select: 'user.username'
+				}
+			})
+			.exec(function(err, comments){
+				if(err){
+					res.status(500).send(err, "Something broke on getting comments");
+				} else {
+					res.json(comments)
+				}
+			});
+	})
+
+
+
 	.post(function(req, res, next){
 		var userId = req.user ? req.user._id : "56f59f6d3a5b222703000003";
 		var comment = new Comments();
