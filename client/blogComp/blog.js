@@ -2,6 +2,7 @@
 	Navbar
 	Footer
 	Blog
+	  BlogPostToggle		
 	  BlogListData
 		BlogList(Stateless)
 			BlogCard(Stateless)

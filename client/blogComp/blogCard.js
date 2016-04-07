@@ -14,11 +14,11 @@ var React = require('react');
 
 function BlogCard(props){
 		return (
-			<div className="container col-xs-10 col-xs-offset-1">
-				<a onClick={ props.getId.bind(null,'showOneBlog', props.id) }>
+			<div className="container col-xs-8 col-xs-offset-2">
+				<a onClick={ props.getId.bind(null,'showOneBlog', props.id) } className="black">
 					<h1 className="divider"> { props.title } </h1>
 				</a>
-				<p> Posted by { props.author }, on { props.date } </p>
+				<p> Posted by <b>{ props.author }</b>, on <b>{ props.date }</b> </p>
 				<p> { props.content } </p>
 				
 			</div>

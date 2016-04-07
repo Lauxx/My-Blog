@@ -11,7 +11,7 @@ var Navbar = React.createClass({
 		var self = this;
 		var link = links.map(function(item){
 			return (
-				<a className="nav-flex font col-lg-offset-2" 
+				<a className="font" 
 				onClick={ self.props.setActiveComponent.bind(null, item) }>{ item }</a>
 				)
 		})
@@ -19,7 +19,7 @@ var Navbar = React.createClass({
 
 		return (
 			<div>
-				<div className="container">
+				<div className="container nav">
   					
   						
     					 { link } 
