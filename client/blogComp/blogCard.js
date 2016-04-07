@@ -15,7 +15,7 @@ var Markdown = require('react-markdown');
 
 
 function BlogCard(props){
-	
+		var content = props.content.substr(0,450) + '...';
 		return (
 		<div>
 			<div className="container col-xs-8 col-xs-offset-2">
@@ -23,7 +23,7 @@ function BlogCard(props){
 					<h1 className="divider"> { props.title } </h1>
 				</a>
 				<p> Posted by <b>{ props.author }</b>, on <b>{ props.date }</b> </p>
-				<Markdown source={props.content}/> 				
+				<Markdown source={ content }/> 				
 			</div>
 			
 		</div>
