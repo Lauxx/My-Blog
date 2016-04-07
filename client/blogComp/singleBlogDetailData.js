@@ -7,8 +7,13 @@
 			BlogCard(Stateless)
 	  BlogPostFormData
 	  	BlogPostForm
+	  EditBlogData
+	  	EditBlogForm	
 	  SingleBlogDetailData
-	  	SingleBlogDetail			
+	  	SingleBlogDetail
+	  		CommentList
+			CommentPostData
+				CommentPostForm
 
 */
 
@@ -50,7 +55,7 @@ var SingleBlogDetailData = React.createClass({
 	},
 
 	render: function(){
-		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id}/> : null;
+		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id} loadOneBlogFromServer={ this.loadOneBlogFromServer } loadCommentsFromServer={ this.loadCommentsFromServer }/> : null;
 	}
 });
 

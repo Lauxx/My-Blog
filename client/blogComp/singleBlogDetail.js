@@ -7,16 +7,19 @@
 			BlogCard(Stateless)
 	  BlogPostFormData
 	  	BlogPostForm
+	  EditBlogData
+	  	EditBlogForm	
 	  SingleBlogDetailData
 	  	SingleBlogDetail
-	  		CommentListData
-	  			CommentList
-	  				CommentCard			
+	  		CommentList
+			CommentPostData
+				CommentPostForm
 
 */
 
 var React = require('react');
-var CommentListData = require('./commentListData');
+var CommentList = require('./commentList');
+var CommentPostData = require('./commentPostData');
 
 function SingleBlogDetail(props){
 
@@ -33,8 +36,13 @@ function SingleBlogDetail(props){
 					<p> Posted by <b>{ props.oneBlog.author }</b>, on <b>{ props.oneBlog.date }</b> </p>
 					<p> { props.oneBlog.content } </p>
 					<br/><br/>
-					<CommentListData commentArray={ props.commentArray }/>		
-			</div>			
+					<CommentList commentArray={ props.commentArray }/>
+					<br/><br/>
+			</div>
+					<CommentPostData id={ props.id } 
+					loadOneBlogFromServer={ props.loadOneBlogFromServer }
+					loadCommentsFromServer={ props.loadCommentsFromServer }/>
+							
 		</div>
 		)
 };

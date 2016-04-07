@@ -10,7 +10,10 @@
 	  EditBlogData
 	  	EditBlogForm	
 	  SingleBlogDetailData
-	  	SingleBlogDetail			
+	  	SingleBlogDetail
+	  		CommentList
+			CommentPostData
+				CommentPostForm
 
 */
 

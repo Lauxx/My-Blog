@@ -1,10 +1,21 @@
-/*BlogApp
+/* BlogApp
 	Navbar
 	Footer
-	
+	Blog
+	  BlogListData
+		BlogList(Stateless)
+			BlogCard(Stateless)
+	  BlogPostFormData
+	  	BlogPostForm
+	  EditBlogData
+	  	EditBlogForm	
+	  SingleBlogDetailData
+	  	SingleBlogDetail
+	  		CommentList
+			CommentPostData
+				CommentPostForm
+
 */
-
-
 
 var React = require('react');
 var ReactDOM = require('react-dom');
