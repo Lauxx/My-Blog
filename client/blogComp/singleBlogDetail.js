@@ -20,6 +20,7 @@
 var React = require('react');
 var CommentList = require('./commentList');
 var CommentPostData = require('./commentPostData');
+var Markdown = require('react-markdown');
 
 function SingleBlogDetail(props){
 
@@ -34,7 +35,7 @@ function SingleBlogDetail(props){
 			<div className="container col-xs-10 col-xs-offset-1">
 				<h1 className="divider"> { props.oneBlog.title } </h1>
 					<p> Posted by <b>{ props.oneBlog.author }</b>, on <b>{ props.oneBlog.date }</b> </p>
-					<p> { props.oneBlog.content } </p>
+					 <Markdown source={ props.oneBlog.content } /> 
 					<br/><br/>
 					<CommentList commentArray={ props.commentArray }/>
 					<br/><br/>
