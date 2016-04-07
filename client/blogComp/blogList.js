@@ -2,11 +2,19 @@
 	Navbar
 	Footer
 	Blog
+	  BlogPostToggle		
 	  BlogListData
 		BlogList(Stateless)
 			BlogCard(Stateless)
 	  BlogPostFormData
-	  	BlogPostForm		
+	  	BlogPostForm
+	  EditBlogData
+	  	EditBlogForm	
+	  SingleBlogDetailData
+	  	SingleBlogDetail
+	  		CommentList
+			CommentPostData
+				CommentPostForm
 
 */
 

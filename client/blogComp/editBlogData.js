@@ -19,6 +19,8 @@ var EditBlogForm = require('./editBlogForm');
 
 
 var EditBlogData = React.createClass({
+	
+
 	getInitialState: function(){
 		return {
 			author: null, 
@@ -58,6 +60,8 @@ var EditBlogData = React.createClass({
 			}.bind(this)
 		});
 	},
+
+
 
 	handleEditBlogSubmit: function(e){
 		e.preventDefault();

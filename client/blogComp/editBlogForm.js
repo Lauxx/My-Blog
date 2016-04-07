@@ -48,7 +48,9 @@ var EditBlogForm = React.createClass({
     				id="formGroupExampleInput2" placeholder="Content"></textarea>
   				</fieldset>
   				<button className="btn btn-default" type="submit">Submit</button>
+
 			</form>
+
 			</div>
 			</div>
 			)

@@ -21,6 +21,7 @@ var React = require('react');
 var SingleBlogDetail = require('./singleBlogDetail');
 
 var SingleBlogDetailData = React.createClass({
+	
 
 	getInitialState: function(){
 		return {
@@ -49,13 +50,15 @@ var SingleBlogDetailData = React.createClass({
 		})
 	},
 
+
 	componentDidMount: function(){
 		this.loadOneBlogFromServer();
 		this.loadCommentsFromServer();
+		
 	},
 
 	render: function(){
-		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id} loadOneBlogFromServer={ this.loadOneBlogFromServer } loadCommentsFromServer={ this.loadCommentsFromServer }/> : null;
+		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id} loadOneBlogFromServer={ this.loadOneBlogFromServer } loadCommentsFromServer={ this.loadCommentsFromServer } toggleActiveComp={ this.props.toggleActiveComp }/> : null;
 	}
 });
 

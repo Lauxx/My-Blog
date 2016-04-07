@@ -52,7 +52,7 @@ var Blog = React.createClass({
 		} else if(this.state.activeComponent === 'blogPostForm'){
 			return <BlogPostFormData toggleActiveComp={ this.toggleActiveComp }/>
 		} else if(this.state.activeComponent === 'oneBlog'){
-			return <SingleBlogDetailData id={ this.state.activeBlogId } getId={ this.getId }/>	
+			return <SingleBlogDetailData id={ this.state.activeBlogId } getId={ this.getId } toggleActiveComp={ this.toggleActiveComp }/>	
 		} else if(this.state.activeComponent === 'editBlog'){
 			return <EditBlogData id={ this.state.activeBlogId } toggleActiveComp={ this.toggleActiveComp }/>
 		} else {
