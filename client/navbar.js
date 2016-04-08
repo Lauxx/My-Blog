@@ -19,7 +19,7 @@ var Navbar = React.createClass({
 
 		return (
 			<div>
-				<div className="container nav">
+				<div className="container nav-toggle ">
   					
   						
     					 { link } 

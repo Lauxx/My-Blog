@@ -2,8 +2,9 @@
 .comments{
 	text-align: right;
 }
-.nav{
+.nav-toggle{
 	text-align: center;
+	border-bottom: dotted 1px #95a5a6;
 }
 .comments-border{
 	margin-top: 5%;
@@ -27,6 +28,7 @@ h3, h4{
 }
 h1 {
 	font-family: "Chasing Embers Demo Version";
+	font-size: 4em;
 }
 .font{
 	font-family: "Chasing Embers Demo Version";

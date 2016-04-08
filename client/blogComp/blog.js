@@ -68,7 +68,7 @@ var Blog = React.createClass({
 		return (
 		<div>
 
-			<div className="jumbotron container">
+			<div className="container">
 				<h1>blog codinglotus</h1>
 			</div>
 			<div className="container">
