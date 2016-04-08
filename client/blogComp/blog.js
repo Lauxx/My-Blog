@@ -32,11 +32,22 @@ var Blog = React.createClass({
 		return {
 			activeComponent: 'blogList',
 			activeBlogId: null,
+			user: null
 		}
 	},
 
+	getCurrentUserFromServer: function(){
+		var self = this;
+		$.ajax({
+			url: '/api/user',
+			method: 'GET'
+		}).done(function(data){
+			self.setState({ user: data })
+		})
+	},
+
 	getId: function(whichComp, id){
-		console.log(id);
+		// console.log(id);
 		if(whichComp === 'showOneBlog'){
 			return this.setState({ activeBlogId: id, activeComponent: 'oneBlog' })
 		} else if(whichComp === 'editOneBlog'){
@@ -52,7 +63,7 @@ var Blog = React.createClass({
 		} else if(this.state.activeComponent === 'blogPostForm'){
 			return <BlogPostFormData toggleActiveComp={ this.toggleActiveComp }/>
 		} else if(this.state.activeComponent === 'oneBlog'){
-			return <SingleBlogDetailData id={ this.state.activeBlogId } getId={ this.getId } toggleActiveComp={ this.toggleActiveComp }/>	
+			return <SingleBlogDetailData id={ this.state.activeBlogId } getId={ this.getId } toggleActiveComp={ this.toggleActiveComp } user={ this.state.user } />	
 		} else if(this.state.activeComponent === 'editBlog'){
 			return <EditBlogData id={ this.state.activeBlogId } toggleActiveComp={ this.toggleActiveComp }/>
 		} else {
@@ -62,6 +73,10 @@ var Blog = React.createClass({
 
 	toggleActiveComp: function(name){
 		this.setState({activeComponent: name})
+	},
+
+	componentDidMount: function(){
+		this.getCurrentUserFromServer();
 	},
 
 	render: function(){

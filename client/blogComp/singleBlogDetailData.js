@@ -26,16 +26,11 @@ var SingleBlogDetailData = React.createClass({
 	getInitialState: function(){
 		return {
 			oneBlog: null,
-			comments: [],
-			user: null
+			comments: []
 		}
 	},
 
-	loadAllUsersFromServer: function(){
-		$.ajax({
-			url: '/'
-		})
-	},
+	
 
 	loadOneBlogFromServer: function(){
 		var self = this;
@@ -65,7 +60,7 @@ var SingleBlogDetailData = React.createClass({
 	},
 
 	render: function(){
-		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id} loadOneBlogFromServer={ this.loadOneBlogFromServer } loadCommentsFromServer={ this.loadCommentsFromServer } toggleActiveComp={ this.props.toggleActiveComp }/> : null;
+		return this.state.oneBlog ? <SingleBlogDetail oneBlog={ this.state.oneBlog } commentArray={ this.state.comments } getId={ this.props.getId } id={this.props.id} loadOneBlogFromServer={ this.loadOneBlogFromServer } loadCommentsFromServer={ this.loadCommentsFromServer } toggleActiveComp={ this.props.toggleActiveComp } user={ this.props.user } /> : null;
 	}
 });
 
