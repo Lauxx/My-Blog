@@ -26,8 +26,15 @@ var SingleBlogDetailData = React.createClass({
 	getInitialState: function(){
 		return {
 			oneBlog: null,
-			comments: []
+			comments: [],
+			user: null
 		}
+	},
+
+	loadAllUsersFromServer: function(){
+		$.ajax({
+			url: '/'
+		})
 	},
 
 	loadOneBlogFromServer: function(){

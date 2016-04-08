@@ -89,6 +89,9 @@ var contactRouter = require('./routes/contact-me');
 var BlogPost = require('./models/blogPost');
 var blogPostRouter = require('./routes/blog_route');
 
+var User = require('./models/user');
+var userRouter = require('./routes/user_route');
+
 
 router.use(function(req, res, next){
 	console.log('Something is happening');
@@ -105,7 +108,7 @@ app.get('/', function(req, res){
 
 
 
-
+app.use('/api', userRouter);
 app.use('/api', contactRouter);
 app.use('/api/blogPost', blogPostRouter);
 

@@ -27,6 +27,7 @@ var SingleBlogDetail = React.createClass({
 		toggleActiveComp: React.PropTypes.func.isRequired
 	},
 
+
 	loadAllBlogsFromServer: function(){
 		var self = this;
 		$.ajax({
@@ -55,6 +56,8 @@ var SingleBlogDetail = React.createClass({
 	},
 
 	render: function(){
+
+
 	return (
 		<div>
 			<button className="btn btn-default" onClick={ this.deleteBlogPost.bind(null, this.props.id) }>Delete Blog</button>	

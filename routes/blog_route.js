@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var BlogPost = require('../models/blogPost');
 var Comments = require('../models/comments');
+
 //'/api/blogPost'
 
 router.route('/')
@@ -27,7 +28,7 @@ router.route('/')
 	.post(function(req, res, next){
 		var post = new BlogPost();
 
-		post.author = req.body.author || '56f59f6d3a5b222703000003';
+		post.author = req.body.author || '5707e59e38781d370991af27';
 		post.title = req.body.title;
 		post.content = req.body.content;
 		post.date = req.body.date;
@@ -68,7 +69,7 @@ router.route('/:_id')
 			if (err){
 				res.status(500).send(err, "Something broke on PUTting the blog")
 			} else {
-				update.author = req.body.author || '56f59f6d3a5b222703000003';
+				update.author = req.body.author || '5707e59e38781d370991af27';
 				update.title = req.body.title ? req.body.title : update.title;
 				update.content = req.body.content ? req.body.content : update.content;
 				update.date = req.body.date ? req.body.date: update.date;
@@ -120,7 +121,7 @@ router.route('/:_id/comment')
 
 
 	.post(function(req, res, next){
-		var userId = req.user ? req.user._id : "56f59f6d3a5b222703000003";
+		var userId = req.user ? req.user._id : "55707e59e38781d370991af27";
 		var comment = new Comments();
 
 		comment.body = req.body.body;
@@ -144,6 +145,8 @@ router.route('/:_id/comment')
 			}
 		});
 	})
+
+
 
 
 

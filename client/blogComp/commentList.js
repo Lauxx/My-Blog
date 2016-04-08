@@ -18,15 +18,31 @@
 */
 
 var React = require('react');
+var G_URL = 'http://gravatar.com/avatar';
+
+
 
 var CommentList = React.createClass({
 	render: function(){
-		
+		// var gravatar = this.props.commentArray.map(function(email){
+		// 	var user = email.user ? email.user.local : 'no user';
+		// 	var email = user.email;
+		// 	var size = 60;
+		// 	var hash = md5(email);
+		// 	var url = G_URL + '/' + hash + '?s=' + size;
+		// 	return(
+		// 		<div>
+		// 		<img src={ url } />
+		// 		</div>
+		// 		)
+		// })
 
 		var comments = this.props.commentArray.map(function(comm){
 			var user = comm.user ? comm.user.local : 'no user';
+
 		return (
 				<div className="col-xs-7 col-xs-offset-1 comments-border">
+
 					<h1 className="divider">@{ user.username } </h1>
 					<p>{ comm.body }</p>
 					<p className="comments"> Comment Recieved on <b>{ comm.date.substr(0,10) }</b> from <b>{ user.username }</b></p>
