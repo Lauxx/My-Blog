@@ -18,7 +18,7 @@ var BlogPostForm = React.createClass({
 			<div>
 				<div className="container">
 			<form className="col-xs-8 col-xs-offset-2" onSubmit={ this.props.handleBlogSubmit }>
-			<h1 className="divider">Post a Blog</h1>
+			<h3 className="divider">Post a Blog</h3>
   				<fieldset className="form-group">
     				<label for="formGroupExampleInput">Title</label>
     				<input type="text" className="form-control" onChange={ this.props.handleTitleChange } 

@@ -23,6 +23,8 @@ var React = require('react');
 var BlogCard = require('./blogCard');
 
 function BlogList(props){
+	
+
 
 	var blogs = props.blogArray.map(function(item){
 		return <BlogCard
@@ -36,6 +38,9 @@ function BlogList(props){
 	})
 		return (
 			<div className="container">
+			<a className="black" 
+			onClick={ props.toggleActiveComp.bind(null, 'blogPostForm') }>
+			<h3>Post a Blog</h3></a>
 				{ blogs }
 			</div>
 			)

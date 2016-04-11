@@ -1,4 +1,7 @@
-
+.links{
+	margin-left: 500px !important;
+	margin-bottom: 30px;
+}
 .comments{
 	text-align: right;
 }
@@ -12,6 +15,12 @@
 	border-right: dotted 1px #95a5a6;
 	border-bottom: dotted 1px #95a5a6;
 	border-left: solid 2px #95a5a6;
+}
+.side-divider{
+	border-left: solid 2px #95a5a6;
+}
+.divide{
+	border-bottom: dotted 1px #95a5a6;
 }
 
 .divider{

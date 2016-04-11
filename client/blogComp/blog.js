@@ -59,7 +59,7 @@ var Blog = React.createClass({
 
 	showComponent: function(){
 		if(this.state.activeComponent === 'blogList'){
-			return <BlogListData getId={ this.getId }/>
+			return <BlogListData getId={ this.getId } toggleActiveComp={ this.toggleActiveComp } user={ this.state.user } />
 		} else if(this.state.activeComponent === 'blogPostForm'){
 			return <BlogPostFormData toggleActiveComp={ this.toggleActiveComp }/>
 		} else if(this.state.activeComponent === 'oneBlog'){
@@ -83,7 +83,7 @@ var Blog = React.createClass({
 		return (
 		<div>
 
-			<div className="container">
+			<div className="container jumbotron">
 				<h1>blog codinglotus</h1>
 			</div>
 			<div className="container">

@@ -26,9 +26,9 @@ function BlogCard(props){
 		var content = props.content.substr(0,450) + '...';
 		return (
 		<div>
-			<div className="container col-xs-8 col-xs-offset-2">
+			<div className="container col-xs-8 col-xs-offset-2 side-divider">
 				<a onClick={ props.getId.bind(null,'showOneBlog', props.id) } className="black">
-					<h3 className="divider"> { props.title } </h3>
+					<h3 className="divide"> { props.title } </h3>
 				</a>
 				<p> Posted by <b>{ props.author }</b>, on <b>{ props.date }</b> </p>
 				<Markdown source={ content }/> 				

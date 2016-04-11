@@ -42,7 +42,7 @@ var BlogListData = React.createClass({
 		this.loadBlogsFromServer();
 	},
 	render: function(){
-		return this.state.blogArray ? <BlogList blogArray={ this.state.blogArray } getId={ this.props.getId } /> : null;
+		return this.state.blogArray ? <BlogList blogArray={ this.state.blogArray } getId={ this.props.getId } user={ this.props.user } toggleActiveComp={ this.props.toggleActiveComp }/> : null;
 	}
 });
 
