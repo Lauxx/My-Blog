@@ -99,7 +99,7 @@ router.route('/:_id')
 
 
 router.route('/:_id/comment')
-// this route allows you to post a comment specific to a blog id
+
 	.get(function(req, res){
 		BlogPost.findById({ _id: req.params._id })
 			.populate({
@@ -118,7 +118,7 @@ router.route('/:_id/comment')
 			});
 	})
 
-
+// this route allows you to post a comment specific to a blog id
 
 	.post(function(req, res, next){
 		var userId = req.user ? req.user._id : "55707e59e38781d370991af27";

@@ -25,6 +25,7 @@ var Home = require ('./homeComp/home');
 var Blog = require('./blogComp/blog');
 var About = require('./aboutComp/about');
 var Contact = require('./contactComp/contact');
+var Icons = require('./icons');
 
 require('./stylesheets/main.scss');
 
@@ -67,6 +68,7 @@ var BlogApp = React.createClass({
 			<Navbar setActiveComponent = { this.setActiveComponent }/>
 			<br/>
 				{ this.showWhichComponent() }
+			<Icons />	
 			<Footer setActiveComponent = { this.setActiveComponent }/>
 			</div>
 			)

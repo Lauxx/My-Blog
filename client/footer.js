@@ -27,12 +27,7 @@ var Footer = React.createClass({
 						{ link }
 							
 					</div>
-					<div className="links">
-						<a className="" href="https://twitter.com/coding_lotus"><img src="img/twitter.png" height="8%" width="8%"/></a>
-						<a className="" href="https://linkedin.com/in/laurennichols11"><img src="img/linkedin.png" height="8%" width="8%"/></a>
-						<a className="" href="https://github.com/lauxx"><img src="img/github.png" height="8%" width="8%"/></a>
-						
-					</div>	
+					
 					<p className="white text-center">© Copyright CodingLotus 2016</p>
 				</nav>
 			</div>	
