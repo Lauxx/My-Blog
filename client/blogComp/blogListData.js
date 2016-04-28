@@ -34,6 +34,7 @@ var BlogListData = React.createClass({
 			url: '/api/blogPost',
 			method: 'GET'
 		}).done(function(data){
+			console.log(data);
 			self.setState({ blogArray: data })
 		})
 	},

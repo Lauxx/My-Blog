@@ -23,7 +23,15 @@ var React = require('react');
 var BlogCard = require('./blogCard');
 
 function BlogList(props){
-	
+	var user = props.user && props.user.local ? props.user.local.role : null;
+
+	if( user === 'admin'){
+		var postBlog = <a className="black" 
+			onClick={ props.toggleActiveComp.bind(null, 'blogPostForm') }>
+			<h3>Post a Blog</h3></a>
+	} else {
+		var postBlog = null;
+	}
 
 	var blogs = props.blogArray.map(function(item){
 
@@ -38,9 +46,7 @@ function BlogList(props){
 	})
 		return (
 			<div className="container">
-			<a className="black" 
-			onClick={ props.toggleActiveComp.bind(null, 'blogPostForm') }>
-			<h3>Post a Blog</h3></a>
+				{ postBlog }
 				{ blogs }
 			</div>
 			)
