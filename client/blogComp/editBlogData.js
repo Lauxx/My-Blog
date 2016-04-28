@@ -1,4 +1,4 @@
-,/* BlogApp
+/* BlogApp
 	Navbar
 	Footer
 	Blog

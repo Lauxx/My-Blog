@@ -3,7 +3,7 @@
 //	Footer
 var React = require('react');
 var links = ['Home', 'Blog', 'About', 'Contact'];
-
+var Icons = require('./icons');
 
 var Footer = React.createClass({
 	render: function(){
@@ -21,12 +21,14 @@ var Footer = React.createClass({
 
 		return (
 			<div >
-				<nav className="navbar-inverse footer">
-  					<div className="container col-xs-12">
-  					<br/><br/>
+			
+				<nav className="navbar footer navbar-inverse navbar-fixed-bottom">
+  					<div className="col-lg-offset-5 icons">
+  					<Icons />
+  					</div>
 						{ link }
 							
-					</div>
+					
 					
 					<p className="white text-center">© Copyright CodingLotus 2016</p>
 				</nav>

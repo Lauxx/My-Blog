@@ -68,7 +68,7 @@ var BlogApp = React.createClass({
 			<Navbar setActiveComponent = { this.setActiveComponent }/>
 			<br/>
 				{ this.showWhichComponent() }
-			<Icons />	
+			
 			<Footer setActiveComponent = { this.setActiveComponent }/>
 			</div>
 			)
