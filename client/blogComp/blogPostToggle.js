@@ -9,9 +9,6 @@ var BlogPostToggle = React.createClass({
 					<a className="black" 
 					onClick={ this.props.toggleActiveComp.bind(null, 'blogList') }>
 					<h3>Blog List</h3></a>
-		
-					
-		
 			</section>
 				
 		</div>	

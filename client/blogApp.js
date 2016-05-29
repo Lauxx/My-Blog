@@ -37,7 +37,6 @@ var BlogApp = React.createClass({
 	},
 
 	setActiveComponent: function(componentName){
-		console.log("component name is: ", componentName);
 		this.setState({
 			activeComponent: componentName
 		})
