@@ -98,6 +98,8 @@ var Contact = require('./models/contact');
 var contactRouter = require('./routes/contact-me');
 var BlogPost = require('./models/blogPost');
 var blogPostRouter = require('./routes/blog_route');
+var AboutMe = require('./models/aboutMe');
+var aboutMeRouter = require('./routes/aboutMe');
 
 var User = require('./models/user');
 var userRouter = require('./routes/user_route');
@@ -109,15 +111,12 @@ router.use(function(req, res, next){
 });
 
 
-
 app.get('/', function(req, res){
 	var user = req.user || " ";
 	res.render('index', {user: user});
 });
 
-
-
-
+app.use('/api/aboutMe', aboutMeRouter);
 app.use('/api', userRouter);
 app.use('/api', contactRouter);
 app.use('/api/blogPost', blogPostRouter);

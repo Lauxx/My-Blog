@@ -1,3 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.about-me-photo{
+	float: right;
+	margin: 2%;
+}
+
+.caption{
+	text-align: center;
+	margin: 1%;
+}
+
+.about-me{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 8%;
+	text-align: justify;
+}
+
 .links{
 	margin-left: 500px !important;
 	margin-bottom: 30px;
@@ -36,18 +56,20 @@ h3, h4{
 
 }
 h1 {
-	font-family: "Chasing Embers Demo Version";
-	font-size: 4em;
+	font-family: 'Poiret One', sans-serif;
+	font-size: 3em;
 }
+
 .font{
-	font-family: "Chasing Embers Demo Version";
+	font-family: 'Poiret One', cursive;
 	margin-left: 20px;
-	font-size: 40px;
+	font-size: 20px;
 	text-align: center;
 	color: black;
 }
 .footer{
-	font-family: "Optima";
+	font-family: "Poiret One", "Optima";
+	font-size: 15px;
 	color:white;
 	position: relative;
 	margin-top: 10%;
@@ -57,12 +79,12 @@ h1 {
 }
 .brand{
 	font-size: 20px;
-	font-family: "Optima";
+	font-family: "Poiret One", "Optima";
 	margin-top: 0px;
 }
 
 .optima{
-	font-family: "Optima";
+	font-family: "Poiret One", "Optima";
 	font-size: 15px;
 }
 
@@ -99,6 +121,7 @@ p, label, input {
 }
 .white{
 	color: white;
+	font-family: "Poiret One", "Optima";
 	
 }
 .div1{

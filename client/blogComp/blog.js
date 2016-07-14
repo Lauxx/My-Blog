@@ -83,8 +83,8 @@ var Blog = React.createClass({
 		return (
 		<div>
 
-			<div className="container jumbotron">
-				<h1>blog codinglotus</h1>
+			<div className="container">
+				<h1>Blog</h1>
 			</div>
 			<div className="container">
 			<BlogPostToggle toggleActiveComp={ this.toggleActiveComp } />
