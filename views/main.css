@@ -23,4 +23,12 @@ h5{
 } /*in use icon/logo*/
 a{
 	margin-right: 3%;
+} /*in use for links*/
+.aboutImage{
+	margin-top: 10%;
 }
+.aboutDescription{
+	font-family: 'Avenir';
+}
+
+
