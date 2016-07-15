@@ -9,18 +9,14 @@
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 			<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/scss?family=Poiret+One' rel='stylesheet' type='text/scss'>
-
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 
 	<body ng-controller="mainControl">
 
-
 		
-
-
-		<div class="header">
-			<header>
+		<header id="header">
 			<div class='row z-depth-1'>
 				<div class='col l8 m6 s6'>
 					<h5 class="black-text">CodingLotus<img class="lotus" src="img/imgres.png" height="23px" width="23px">
@@ -33,44 +29,42 @@
 					<a class="black-text" ui-sref="contact">Contact</a></h5>
 				</div>
 			</div>
-			</header>
+		</header>
+			
+		<main>
 			<div class="container">
 				<ui-view></ui-view>
 			</div>
-		</div>
+		</main>	
 
-		
-
-		<footer class="page-footer lime lighten-4">
+		<footer id="footer" class="page-footer lime lighten-4">
           <div class="container">
             <div class="row">
-              <div class="col l6 m6 s6">
+              <div class="col l6 m6 s10 offset-s1">
                 <h5 class="black-text">CodingLotus<img class="lotus" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="23px" width="23px"></h5>
                 <p class="black-text text-lighten-4">A novice's journey through computer programming.</p>
               </div>
-              <div class="col l3 offset-l3 s6  m6 ">
+              <div class="col l4 offset-l2 m5 offset-m1 hide-on-small-only">
                 <ul class="aboutIcons">
                 <a href="https://github.com/lauxx"><img src="img/githubblack.png" height="50px" width="50px"></a>
             	<a href="http://www.linkedin.com/in/laurennichols11"><img src="img/linkedin.png" height="50px" width="50px"></a>
-            	<a href="https://twitter.com/coding_lotus"><img src="img/twitterblack.png" height="50px" width="50px"></a>	
+            	<a href="https://twitter.com/coding_lotus"><img src="img/twitterblack.png" height="50px" width="50px"></a>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright lime lighten-3">
-            <div class="container black-text">
+            <div class="container black-text col l6">
            		 © Copyright CodingLotus 2016
-           	 
-           	<a class="black-text right" ui-sref="contact">Contact</a>
-			<a class="black-text right" ui-sref="about">About</a>
-			<a class="black-text right" ui-sref="home">Home</a>
-            </div>
-          </div>
+          		<a class="black-text right" ui-sref="contact">Contact</a>
+				<a class="black-text right" ui-sref="about">About</a>
+				<a class="black-text right" ui-sref="home">Home</a>	
+			</div>
         </footer>
 
 
 
-
+      
 
 		<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script> 

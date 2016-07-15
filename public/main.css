@@ -1,5 +1,14 @@
-.header{
-	position: fixed;
+body {
+   
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+#header{
+	/*position: fixed;*/
 	top: 0px;
 	left: 0px;
 	width: 100%;
@@ -7,10 +16,10 @@
 	height: auto;
 	padding: 1%;
 } /*in use header*/
-.page-footer{
-   position:fixed;
-   left:0px;
-   bottom:0px;
+#footer{
+	/*clear: both;*/
+   /*left:0px;
+   bottom:0px;*/
    width:100%;
    font-family: 'Avenir'
 } /*in user footer*/
@@ -26,7 +35,7 @@ a{
 	margin-right: 3%;
 } /*in use for links*/
 .aboutImage{
-	margin-top: 10%;
+	margin-top: 5%;
 }
 .aboutDescription{
 	font-family: 'Avenir';
