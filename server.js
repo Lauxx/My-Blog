@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 app.use(passport.initialize());
 app.use(passport.session()); 
 
