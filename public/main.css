@@ -1,5 +1,4 @@
 body {
-   
    display: flex;
    min-height: 100vh;
    flex-direction: column;
@@ -7,8 +6,16 @@ body {
 main {
     flex: 1 0 auto;
 }
+h5{
+	font-family: 'Lobster'	
+} /*in use brand name next to logo*/
+a{
+	margin-right: 3%;
+} /*in use for links*/
+p{
+	font-family: 'Avenir';
+}
 #header{
-	/*position: fixed;*/
 	top: 0px;
 	left: 0px;
 	width: 100%;
@@ -17,23 +24,15 @@ main {
 	padding: 1%;
 } /*in use header*/
 #footer{
-	/*clear: both;*/
-   /*left:0px;
-   bottom:0px;*/
    width:100%;
    font-family: 'Avenir'
 } /*in user footer*/
-h5{
-	font-family: 'Lobster'	
-} /*in use brand name next to logo*/
 .lotus{
 	margin-top: .2%;
 	margin-left: .5%;
 	position: absolute;
 } /*in use icon/logo*/
-a{
-	margin-right: 3%;
-} /*in use for links*/
+
 .aboutImage{
 	margin-top: 5%;
 }
