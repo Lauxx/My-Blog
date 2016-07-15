@@ -1,0 +1,26 @@
+.header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	margin: auto;
+	height: auto;
+} /*in use header*/
+.page-footer{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   font-family: 'Avenir'
+} /*in user footer*/
+h5{
+	font-family: 'Lobster'	
+} /*in use brand name next to logo*/
+.lotus{
+	margin-top: .2%;
+	margin-left: .5%;
+	position: absolute;
+} /*in use icon/logo*/
+a{
+	margin-right: 3%;
+}

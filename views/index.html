@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="LoBlog">
+	<head>
+		<title>Coding Lotus</title>
+			<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    		<meta http-equiv="x-ua-compatible" content="ie=edge">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+			<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/scss?family=Poiret+One' rel='stylesheet' type='text/scss'>
+			<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+	<body ng-controller="mainControl">
+
+
+		
+
+
+		<div class="header">
+			<header>
+			<div class='row'>
+				<div class='col l8 m6 s6'>
+					<h5 class="black-text">CodingLotus<img class="lotus" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="23px" width="23px">
+					</h5>
+				</div>
+				<div class="col l4 m6 s6">	
+					
+					<h5 class="right"><a class="black-text" ui-sref="home">Home</a>
+					<a class="black-text" ui-sref="about">About</a>
+					<a class="black-text" ui-sref="contact">Contact</a></h5>
+				</div>
+			</div>
+			</header>
+			<div class="container">
+				<ui-view></ui-view>
+			</div>
+		</div>
+
+		
+
+		<footer class="page-footer lime lighten-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="black-text">CodingLotus<img class="lotus" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="23px" width="23px"></h5>
+                <p class="black-text text-lighten-4">A novice's journey through computer programming.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright lime lighten-3">
+            <div class="container black-text">
+           		 © Copyright CodingLotus 2016
+           	<a class="black-text right" ui-sref="contact">Contact</a>
+			<a class="black-text right" ui-sref="about">About</a>
+			<a class="black-text right" ui-sref="home">Home</a>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+
+		<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="mainControl.js"></script>
+		<script type="text/javascript" src="mainServe.js"></script>
+	
+	</body>
+</html>
