@@ -147,19 +147,4 @@ router.route('/:_id/comment')
 	})
 
 
-
-
-
-// router.route('/comment/:comment_id')
-// 	.delete(function(req, res){
-// 		Comments.remove({ comment_id: req.params.comment_id },
-// 			 function(err, comment){
-// 			if(err){
-// 				res.status(500).send(err, "Something broke on deleting a comment")
-// 			} else {
-// 				res.json(comment)
-// 			}
-// 		});
-// 	})
-
 module.exports = router;
