@@ -6,7 +6,7 @@ body {
 main {
     flex: 1 0 auto;
 }
-h5{
+h5, h3{
 	font-family: 'Lobster'	
 } /*in use brand name next to logo*/
 a{
@@ -15,9 +15,17 @@ a{
 p{
 	font-family: 'Avenir';
 }
+.brand{
+	/*padding-top: 30%;*/
+}
 .reorder{
 	font-size: 60px;
 }
+.landingImage{
+	opacity: .3;
+	margin-top: -10%;
+}
+
 #header{
 	top: 0px;
 	left: 0px;
