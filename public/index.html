@@ -16,12 +16,15 @@
 	<body ng-controller="mainControl">
 
 		
-		<header id="header">
-
-			<div>
-				<div class='col l8 m6 s6'>
-					<h3 class="black-text brand">CodingLotus<img class="lotus" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="23px" width="23px">
-					</h3>
+		<header id="head">
+			
+		
+				<div>
+					<img class="landingImage" src="img/desktop.jpeg" height="90%" width="100%">
+				    <i class="medium material-icons col l1 m1 s1 left menu">reorder</i>
+					<!-- <h3 class="black-text col l3 m3 s3 right">CodingLotus<img class="lotus" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="30px" width="30px">
+					<! </h3> -->
+					
 				</div>
 				<!-- <div class="col l4 m6 s6">	
 					
@@ -29,13 +32,21 @@
 					<a class="black-text" ui-sref="about">About</a>
 					<a class="black-text" ui-sref="contact">Contact</a></h5>
 				</div> -->
-			</div>
-			<img class="landingImage" src="img/desktop.jpeg" height="90%" width="100%">
+			
+			
 		</header>
 			
 		<main>
-			<div class="container">
-				<ui-view></ui-view>
+			<div class="container ">
+				<!-- <ui-view></ui-view> -->
+				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+				Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.
+				Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+				Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+				Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
 			</div>
 		</main>	
 
@@ -43,7 +54,7 @@
           <div class="container">
             <div class="row">
               <div class="col l6 m6 s10 offset-s1">
-                <h5 class="black-text">CodingLotus<img class="lotus" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="23px" width="23px"></h5>
+                <h5 class="black-text">CodingLotus<img class="lotusBottom" src="https://d30y9cdsu7xlg0.cloudfront.net/png/108170-200.png" height="23px" width="23px"></h5>
                 <p class="black-text text-lighten-4">Let's build something beautiful.</p>
               </div>
               <div class="col l4 offset-l2 m5 offset-m1 hide-on-small-only">
@@ -66,7 +77,12 @@
 
 
 
-      
+      <script>
+      	// Show sideNav
+  $('.button-collapse').sideNav('show');
+  // Hide sideNav
+  $('.button-collapse').sideNav('hide');
+      </script>
 
 		<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script> 

@@ -6,7 +6,7 @@ body {
 main {
     flex: 1 0 auto;
 }
-h5, h3{
+h5, h3, h4{
 	font-family: 'Lobster'	
 } /*in use brand name next to logo*/
 a{
@@ -15,34 +15,41 @@ a{
 p{
 	font-family: 'Avenir';
 }
-.brand{
-	/*padding-top: 30%;*/
-}
-.reorder{
-	font-size: 60px;
-}
 .landingImage{
-	opacity: .3;
-	margin-top: -10%;
+	position: relative;
+}
+.menu{
+	position: fixed;
+	top: 0;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+.head{
+	display: inline-flex;
 }
 
-#header{
+/*#header{
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	margin: auto;
 	height: auto;
 	padding: 1%;
-} /*in use header*/
+}*/ /*in use header*/
 #footer{
    width:100%;
    font-family: 'Avenir'
 } /*in user footer*/
 .lotus{
-	margin-top: .2%;
+	margin-top: .7%;
 	margin-left: .5%;
 	position: absolute;
 } /*in use icon/logo*/
+.lotusBottom{
+	margin-top: .2%;
+	margin-left: .5%;
+	position: absolute;
+}
 .about{
 	margin-top: 5%;
 }
